@@ -20,5 +20,5 @@ def getd(user, token, start = None , stop = None, client = None):
 	return pages
 
 def getsum(user, token, start = None, stop = None, client = None):
-	
-	
+
+	test bits
