@@ -19,3 +19,5 @@ def getd(user, token, start = None , stop = None, client = None):
 			count += 1
 	return pages
 
+def getsum():
+	
