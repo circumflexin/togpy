@@ -20,5 +20,10 @@ def getd(user, token, start = None , stop = None, client = None):
 	return pages
 
 def getsum(user, token, start = None, stop = None, client = None):
-	
-	
+	url = "https://toggl.com/reports/api/v2/summary?workspace_id=%i&user_agent=alec.burslem@gmail.com&client_ids=%i" % (user,client)
+	if start != None:
+		url = url + "&since=%s" % start
+	if stop != None:
+		url = url + "&until=%s" % stop
+	summary = requests.get(url, auth = (token, 'api_token'),)
+	return summary.json()	
